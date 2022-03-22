@@ -1,6 +1,8 @@
-class ConstBackground {
-  static const String PRIMARY = '#222831';
-  static const String SECONDARY = '#393E46';
-  static const String TERTIARY = '#00ADB5';
-  static const String QUATERNARY = '#EEEEEE';
+import 'package:flutter/cupertino.dart';
+
+class ConstBackgroundLight {
+  static const Color primary = Color(0x00ffffff);
+  static const Color secondary = Color(0x00f1f3f6);
+  static const Color textPrimary = Color(0x00171822);
+  static const Color textSecondary = Color(0x003a4276);
 }

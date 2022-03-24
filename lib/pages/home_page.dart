@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                     padding:
                         const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                    margin: const EdgeInsets.symmetric(vertical: 5),
+                    margin: const EdgeInsets.symmetric(vertical: 14),
                     alignment: Alignment.bottomLeft,
                     child: const Text(
                       "Services",
@@ -66,19 +66,15 @@ class _HomePageState extends State<HomePage> {
                     )),
                 InkWell(
                   onTap: () {},
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(100),
                   child: Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 2, vertical: 2),
                       margin: const EdgeInsets.symmetric(
                           vertical: 5, horizontal: 15),
                       alignment: Alignment.bottomLeft,
-                      child: const Text(
-                        "See all",
-                        style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.grey),
+                      child: const Icon(
+                        Icons.tune_rounded,
                       )),
                 ),
               ],
@@ -120,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                     padding:
                         const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                    margin: const EdgeInsets.symmetric(vertical: 5),
+                    margin: const EdgeInsets.symmetric(vertical: 14),
                     alignment: Alignment.bottomLeft,
                     child: const Text(
                       "Recent Transaction",
@@ -143,7 +139,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Column(
               children: List.generate(
-                5,
+                3,
                 (index) => const TransactionItem(
                     title: "title",
                     desc: 'desc',
@@ -182,7 +178,7 @@ class ServiceItem extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
             margin: const EdgeInsets.all(4),
             decoration: BoxDecoration(
                 color: const Color.fromARGB(50, 125, 125, 125),
@@ -224,15 +220,15 @@ class TransactionItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 6),
-      padding: const EdgeInsets.all(10),
+      margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: ConstBackgroundLight.secondary,
       ),
       child: Row(children: [
         Container(
-          padding: const EdgeInsets.all(4),
+          padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20), color: bgIcon),
           child: icon,
@@ -356,7 +352,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+      padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -396,11 +392,11 @@ class Balance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 14),
       child: Column(
         children: [
           Container(
-              margin: const EdgeInsets.only(bottom: 5),
+              margin: const EdgeInsets.only(bottom: 7),
               alignment: Alignment.bottomLeft,
               child: const Text(
                 "Account Overview",
